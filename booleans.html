@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<title>Booleans</title>
+<body>
+  <script>
+    if(5>2){
+      console.log('Hello');
+    }else{
+      console.log('Goodbye');
+    }
+     
+
+    const cartQuantity=8;
+    if(cartQuantity){
+      console.log('Cart has products');
+    }
+
+    const result=0 ? 'True': 'False';
+    console.log(result);
+
+    const message =5 && 'hello';
+    console.log(message);
+
+
+
+    const dollar= 'USD' || 'EUR';
+    console.log(dollar);
+
+
+    let hour=7;
+    const name='Dibash';
+    if(hour>=6 && hour<=12 ){
+      console.log(`Good Morining! ${name}`);
+    }else if(hour>=13 && hour<=17){
+      console.log('Good Afternoon');
+    }else{
+      console.log('Good Evening');
+    }
+
+    let age=80;
+    const isHoliday=true;
+    if((age<=6 || age>=65) && !isHoliday){
+      console.log('You are qualified for discount');
+    }else{
+      console.log('You are not qualified for discount');
+    }
+
+  </script>
+  
+</body>
+</html>

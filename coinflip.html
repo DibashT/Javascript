@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<title>Coin Flip</title>
+<body>
+  <script>
+    randomNumber=Math.random();
+    let result='';
+    let guess=prompt('Head or Tail');
+    
+
+    if (randomNumber<1/2){
+      result='Head';
+    }else{
+      result='Tail';
+    }
+    
+    if(guess===result){
+      display=('You win');
+    }else{
+      display=('You lose');
+    }
+
+    alert(`The result was ${result}, the guess was ${guess} and  ${display}`);
+  </script>
+</body>
+</html>
