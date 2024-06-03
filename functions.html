@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<title>Functions</title>
+<body>
+  <script>
+    function add(){
+      console.log('Hello World');
+      console.log(2+2);
+    }
+    add();
+
+    function add(a,b){
+      console.log(a+b);
+      console.log(a-b);
+    }
+    add(2,2);
+
+    function greet(name){
+      return `Hello ${name}!`;
+
+    }
+    console.log(greet('Dibash'));
+
+    function convertToFahrenheit(celsius){
+      return (celsius*9/5)+32;
+    }
+
+    function convertToCelsius(Fahrenheit){
+      return (Fahrenheit-32)*5/9;
+    }
+
+    function convertTemperature(degrees, unit){
+      if (unit === 'C'){
+        const result=convertToFahrenheit(degrees);
+        return `${result}`;
+      }else if(unit === 'F'){
+        const result=convertToCelsius(degrees);
+        return `${result}`;
+    }
+    }
+    console.log(convertTemperature(25,'C'));
+    console.log(convertTemperature(86,'F'));
+
+
+    function milestoK(m){
+      return m*1.6;
+    } 
+
+    function kmtomiles(k){
+      return k/1.6;
+    }
+
+    function kmtokm(k){
+      return k*1;
+    }
+
+    function convertToLength(length, from, to){
+      if(from==='miles'){
+        result=milestoK(length);
+        console.log(`${result}`);
+      }else if (from==='km'){
+        result=kmtomiles(length);
+        console.log(`${result}`);
+      }else if (from==='km2'){
+        result=kmtokm(length);
+        console.log(`${result}`);
+      }else{
+        console.log(`Invalid ${from}`);
+      }
+    }
+    convertToLength(50,'miles','km');
+    convertToLength(32,'km','miles');
+    convertToLength(50,'km2','km');
+    convertToLength(32,'meter','miles');
+    
+
+
+
+   
+
+  </script>
+</body>
+</html>

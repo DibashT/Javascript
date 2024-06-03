@@ -23,8 +23,31 @@
     <button onclick="calculation=eval(calculation);
     console.log(`Calculation: ${calculation}`);">=</button>
 
+    <!-- var a = parseInt(prompt('Enter number a'));
+    var b = parseInt(prompt('Enter number b'));
+    var operator = prompt('Enter operator'); -->
+
     <script>
       let calculation='';
+      var a=prompt('Enter number a');
+      var b=prompt('Enter number b');
+      var operator=prompt('Enter operator');
+
+      function calculator(a,b,operator)
+      {
+        if (operator==='+'){
+         return add(a+b);}
+        else if(operator==='-'){
+          return subtract(a-b);
+        }else if(operator==='*'){
+          return multiply(a*b);
+        }else if(operator==='/'){
+          return divide(a/b);
+        }else{
+          alert('Invalid operator');
+        }
+      }
+     
     </script>
 </body>
 </html>

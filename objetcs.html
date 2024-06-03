@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<title>Objects</title>
+<body>
+  <script>
+    const a={
+      name:'Dibash',
+      age:22,
+      'time-update':12,
+      rating:{
+        stars:4.5,
+        count:100,
+      },
+      fun: function function1(){
+        console.log('hello');
+      }
+    };
+    console.log(a.name);
+    a.name='Laptop';
+    console.log(name);
+
+    a.hobbies='coding';
+    console.log(a);
+    console.log(a['hobbies']);
+
+    console.log(a.rating['stars']);
+
+    a.fun();
+
+    console.log(JSON.stringify(a));
+
+    const JSONstring=JSON.stringify(a);
+    console.log(JSON.parse(JSONstring));
+
+
+    console.log('Dibash'.length);
+    console.log('Thapa'.toLowerCase());
+
+    const object1={
+      message:'Hello Dibash',
+    }
+
+    const object2=object1;
+    object2.message='I am new to this';
+    console.log(object2.message);
+
+    const object3={
+      mesage:'Hello Dibash',
+    }
+
+    
+
+  </script>
+  
+</body>
+</html>

@@ -8,42 +8,64 @@
 <title>cart Quantity</title>
 <body>
   <button onclick="console.log(`Cart quantity:${cartQuantity}`);">Show quantity</button>
-  
+
   <button onclick="
-  cartQuantity+=1;
-  console.log(`Cart quantity:${cartQuantity}`);
+  updateCartQuantity(1);
   ">Add to cart</button>
+
   <button onclick="
-  cartQuantity+=2;
-  console.log(`Cart quantity:${cartQuantity}`);">+2</button>
+  updateCartQuantity(2); "
+  >+2</button>
+
   <button onclick="
-  cartQuantity+=3;
-  console.log(`Cart quantity:${cartQuantity}`);
+  updateCartQuantity(3);
   ">+3</button>
+
   <button onclick="
-  cartQuantity=0;
-  console.log('Cart was reset!');
-  console.log(`Cart quantity:${cartQuantity}`);
+      cartQuantity = 0;
+      console.log('Cart was reset.');
+      console.log(`Cart quantity: ${cartQuantity}`);
    ">Reset Cart</button>
 
-  <button onclick="cartQuantity+=4;
-   console.log(`Cart quantity:${cartQuantity}`)">+4</button>
+  <button onclick="
+  updateCartQuantity(4);
+  ">+4</button>
 
-  <button onclick="cartQuantity+=5;
-  console.log(`Cart quantity:${cartQuantity}`)">+5</button> 
+  <button onclick="
+   updateCartQuantity(5);
+    ">+5</button> 
 
-  <button onclick="cartQuantity-=1;
-  console.log(`Cart quantity:${cartQuantity}`);">Remove from cart</button>
+  <button onclick="
+  updateCartQuantity(-1);
+  ">Remove from cart</button>
 
-  <button onclick="cartQuantity-=2;
-  console.log(`Cart quantity:${cartQuantity}`);">Remove -2</button>
+  
+  <button onclick="
+  updateCartQuantity(-2);
+  ">Remove -2</button>
 
-  <button onclick="cartQuantity-=3;
-  console.log(`Cart Quantity is:${cartQuantity}`);">Remove =3</button>
+  
+  <button onclick="
+  updateCartQuantity(-3);
+  ">Remove -3</button>
 
 
   <script>
     let cartQuantity = 0;
+
+    function updateCartQuantity(change){
+      if(cartQuantity+change>10){
+        alert('Cart is full !');
+        return;
+      }else if(cartQuantity+change<0){
+        alert('Cart is empty !');
+        return;
+      }else{
+        cartQuantity+=change;
+        alert(`Cart quantity is:${cartQuantity}`);
+      }};
+
+
   </script>
   
 
